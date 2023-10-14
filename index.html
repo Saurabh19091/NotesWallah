@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="overlay">
+        <!-- LOGN IN FORM by Omar Dsoky -->
+        <form action="#" onsubmit="login(event)">
+            <!--   con = Container  for items in the form-->
+            <div class="con">
+                <!--     Start  header Content  -->
+                <header class="head-form">
+                    <h2>Log In</h2>
+                    <!--     A welcome message or an explanation of the login form -->
+                    <p>login here using your username and password</p>
+                </header>
+                <!--     End  header Content  -->
+                <br>
+                <div class="field-set">
+
+                    <!--   user name -->
+                    <span class="input-item">
+                   <i class="fa fa-user-circle"></i>
+                 </span>
+                    <!--   user name Input-->
+                    <input class="form-input" type="text" name="email" id="email" autocomplete="email">
+
+
+                    <br>
+
+                    <!--   Password -->
+
+                    <span class="input-item">
+                <i class="fa fa-key"></i>
+               </span>
+                    <!--   Password Input-->
+                    <input class="form-input" type="password" name="password" id="password" autocomplete="current-password">
+
+
+                    <!--      Show/hide password  -->
+                    <span>
+                <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+             </span>
+
+
+                    <br>
+                    <!--        buttons -->
+                    <!--      button LogIn -->
+                    <button class="log-in"> Log In </button>
+                </div>
+
+                <!--   other buttons -->
+                <div class="other">
+                    <!--      Forgot Password button-->
+                    <p> <a href="javascript:void(0);" onclick="forgotPassword()">Forgot Password?</a></p>
+                    <p>Don't have an account?<a href="signup.html">Sign Up</a></p>
+
+                </div>
+
+                <!--   End Conrainer  -->
+            </div>
+
+            <!-- End Form -->
+        </form>
+    </div>
+
+</body>
+<script src="/login.js" type="module"></script>
+
+</html>

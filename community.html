@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Joiner & Animator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .communities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        
+        .community {
+            background-color: #d6d4d4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .community:hover {
+            transform: scale(1.05);
+        }
+        
+        .community h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .community p {
+            font-size: 16px;
+        }
+        
+        .join-button {
+            background-color: #3f3232;
+            /* Red color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: #f4f4f4;
+        }
+        
+        .animation-box {
+            width: 380px;
+            height: 100px;
+            /* Red color */
+            animation: blink 1s infinite alternate;
+            display: flex;
+            display: inline;
+            text-align: center;
+        }
+        
+        body {
+            background: radial-gradient(at 50%, blue, green);
+        }
+        
+        .ok {
+            font-size: 39px;
+            content: between;
+        }
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Our Communities!</h1>
+        <p>Choose a community to join:</p>
+    </header>
+    <div class="animation-container">
+        <div class="animation-box">
+            <h1 class="ok">Join the community</h1>
+        </div>
+    </div>
+
+    <div class="communities">
+        <!-- Community 1 -->
+        <div class="community">
+            <h2>Programming Enthusiasts</h2>
+            <p>Join our community to discuss coding and programming.</p>
+            <button class="join-button">Join</button>
+        </div>
+
+
+
+        <!-- Community 2 -->
+        <div class="community">
+            <h2>Data structure </h2>
+            <p>Join our community to learn and share Data structure.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Web Development</h2>
+            <p>Join our community to learn and share web Development.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Angular Community</h2>
+            <p>Join our community to learn and share Angular community.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Stack Overflow</h2>
+            <p>Join our community to learn and share Stack Overflow.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Linkdin Group</h2>
+            <p>Join our community to learn and share Linkdin .</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Twittet</h2>
+            <p>Join our community to learn and share Twitter.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Meet up</h2>
+            <p>Join our community to learn and share web design techniques.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Bug Baar</h2>
+            <p>Join our community to learn and share Bugbaar.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Dev code comminity</h2>
+            <p>Join our community to learn and share Dev code community.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>SoS Tech</h2>
+            <p>Join our community to learn and share SoS Tech comminity.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>DSA Community</h2>
+            <p>Join our community to learn and share DSA Community.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Jobs and Internships Updates </h2>
+            <p>Join our community to learn and share Jobs and Internships Updates .</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>codedu Community</h2>
+            <p>Join our community to learn and share Codedu Community.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>LeetCode Community</h2>
+            <p>Join our community to learn and share LeetCode Community.</p>
+            <button class="join-button">Join</button>
+        </div>
+        <div class="community">
+            <h2>Codeforce Community</h2>
+            <p>Join our community to learn and share Codeforces Community.</p>
+            <button class="join-button">Join</button>
+        </div>
+
+
+        <!-- Add more communities as needed -->
+    </div>
+
+
+</body>
+
+</html>

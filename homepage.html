@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/696bc18a6f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+    <!-- navigation -->
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="img/large.png" width="250px" height="100px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="login.html">Home</a>
+                    </li>
+                    <!-- Tutorial Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tutorialDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tutorial
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="tutorialDropdown">
+                            <a class="dropdown-item" href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Data structure & algorithm</a>
+                            <a class="dropdown-item" href="https://www.geeksforgeeks.org/machine-learning/">Ml & datascience</a>
+                            <a class="dropdown-item" href="https://takeuforward.org/system-design/complete-system-design-roadmap-with-videos-for-sdes/">System design</a>
+                            <a class="dropdown-item" href="https://takeuforward.org/#">Interveiw corner</a>
+                            <a class="dropdown-item" href="https://www.codingninjas.com/studio/guided-paths?category=web-app-development">WEB DEVELOPEMENT</a>
+                            <a class="dropdown-item" href="https://takeuforward.org/#">Cs subject</a>
+                            <a class="dropdown-item" href="https://www.geeksforgeeks.org/git-tutorial/?ref=ghm">Devoops</a>
+                            <a class="dropdown-item" href="https://www.geeksforgeeks.org/gate-cs-notes-gq/?ref=ghm">Gate</a>
+                        </div>
+                    </li>
+                    <!-- Course Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Course
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="courseDropdown">
+                            <a class="dropdown-item" href="https://takeuforward.org/#">Interveiw preperation</a>
+                            <a class="dropdown-item" href="https://www.codingninjas.com/studio/guided-paths?category=interview-preparation">DSA TO DEVELOPEMENT</a>
+                            <a class="dropdown-item" href="https://www.codingninjas.com/studio/guided-paths?category=web-app-development">WEB DEVELOPEMENT</a>
+                            <a class="dropdown-item" href="https://www.codingninjas.com/studio/guided-paths?category=data-sciencemachine-learning">Artificial Intelligence</a>
+                            <a class="dropdown-item" href="https://www.codingninjas.com/studio/guided-paths?category=data-sciencemachine-learning">Machine learning</a>
+                            <a class="dropdown-item" href="https://www.codingninjas.com/studio/guided-paths?category=hot-new-tech">Block chain</a>
+                            <a class="dropdown-item" href="https://www.codingninjas.com/studio/guided-paths?category=interview-preparation">DBMS</a>
+                            <a class="dropdown-item" href="https://takeuforward.org/operating-system/most-asked-operating-system-interview-questions/">operating System</a>
+                            <a class="dropdown-item" href="https://takeuforward.org/computer-network/most-asked-computer-networks-interview-questions/">Computer NETWORK</a>
+                        </div>
+                    </li>
+                    <!-- Practice Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="practiceDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Practice
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="practiceDropdown">
+                            <a class="dropdown-item" href="https://practice.geeksforgeeks.org/explore?page=1&sortBy=submissions&itm_source=geeksforgeeks&itm_medium=main_header&itm_campaign=practice_header">All Dsa problem</a>
+                            <a class="dropdown-item" href="https://practice.geeksforgeeks.org/problem-of-the-day?itm_source=geeksforgeeks&itm_medium=main_header&itm_campaign=practice_header">Problem of the day</a>
+                            <a class="dropdown-item" href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Striver Dsasheet</a>
+                        </div>
+                    </li>
+                    <!-- Connect -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Connect</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Programming and Subject Notes Download</h1>
+        <p>Choose a programming language or subject to access notes:</p>
+        <div class="button">
+            <a href="community.html">
+                <h2>Join Community Here</h2>
+            </a>
+
+        </div>
+        <div class="button">
+            <h2>Join Discord Community</h2>
+
+        </div>
+
+    </header>
+
+    <div class="buttons">
+        <!-- Programming Language Buttons -->
+        <div class="button">
+            <h2>C++</h2>
+
+            <a href="https://drive.google.com/drive/folders/1l6gGcBVzTkMPyP9iJpqzYjoLUBk_46UC?usp=drive_link">
+                <p>Download C++ notes
+                </p>
+            </a>
+
+
+        </div>
+        <div class="button">
+            <h2>Java</h2>
+            <a href="https://drive.google.com/drive/folders/1jkauTqzwEOJqLxy0urpya-A7PB-T_pp3?usp=drive_link">
+                <p>Download Java notes</p>
+            </a>
+        </div>
+        <div class="button">
+            <h2>Python</h2>
+            <a href="https://drive.google.com/drive/folders/1k6WLVfTTISPths8FMLlFALc7lB54wFv8?usp=drive_link">
+                <p>Download Python notes</p>
+            </a>
+        </div>
+        <!-- Add more programming languages as needed -->
+        <div class="button">
+            <h2>C language</h2>
+            <a href="https://drive.google.com/drive/folders/1snfWoZlnsFDUeMaq78R67nQVJmfH2Kq5?usp=drive_link">
+                <p>Download C notes</p>
+            </a>
+        </div>
+        <div class="button">
+            <h2>Competative Coding</h2>
+            <a href="https://drive.google.com/drive/folders/1v7nRJGImYqodXH2AEOtoeeJvGJBfBYo2?usp=drive_link">
+                <p>Download Python notes</p>
+            </a>
+        </div>
+        <div class="button">
+            <h2>Data Structures</h2>
+            <p>Download Data structure notes</p>
+        </div>
+        <div class="button">
+            <h2>DBMS</h2>
+            <p>Download DBMS notes</p>
+        </div>
+        <div class="button">
+            <h2>FAANG</h2>
+            <p>Download FAANG notes</p>
+        </div>
+        <div class="button">
+            <h2>GIT HUB</h2>
+            <p>Download GIT HUB notes</p>
+        </div>
+        <div class="button">
+            <h2>GPT</h2>
+            <p>Download GPT notes</p>
+        </div>
+        <div class="button">
+            <h2>LEETCODE</h2>
+            <p>Download leetcode notes</p>
+        </div>
+        <div class="button">
+            <h2>OPERATING SYSTEM</h2>
+            <p>Download operating system notes</p>
+        </div>
+        <div class="button">
+            <h2>PLACEMENT</h2>
+            <p>Download Placement notes</p>
+        </div>
+        <div class="button">
+            <h2>RESUME TIPS</h2>
+            <p>Download Resume tips notes</p>
+        </div>
+        <div class="button">
+            <h2>SOFT SKILL</h2>
+            <p>Download Soft skills notes</p>
+        </div>
+        <div class="button">
+            <h2>web development</h2>
+            <p>Download web development notes</p>
+        </div>
+        <div class="button">
+            <h2>JAVA SCRIPT</h2>
+            <p>Download Java script notes</p>
+        </div>
+
+
+        <!-- Subject Buttons -->
+        <div class="button">
+            <h2>Web Design</h2>
+            <p>Download Web Design notes</p>
+        </div>
+        <div class="button">
+            <h2>Data Structures</h2>
+            <p>Download Data Structures notes</p>
+        </div>
+
+        <!-- Add more subjects as needed -->
+    </div>
+
+
+    <!-- carousel slide -->
+
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/background.png" class="img-fluid">
+                <div class="carousel-caption">
+                    <h1 class="display-2">NOTES WALLAH</h1>
+                    <h3>Complete Website for Notes</h3>
+                    <button class="btn btn-outline-light btn-lg" type="button">VIEW DEMO</button>
+                    <button class="btn btn-primary btn-lg">Get Started</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/2.png" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src="img/3.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- jumbotron -->
+    <div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                <p class="lead">A web hosting services allow individuals and organization to make your website accessible via the World Wide Web.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                <a href=""><button type="button" class="btn btn-outline-secondary btn-lg">Web hosting</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- welcome section -->
+
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">Build with ease</h1>
+            </div>
+            <hr class="my-4">
+            <div class="col-12">
+                <p class="lead">
+                    Welcome to my Boostrap 4 website tutorial! Boostrap is free and open-soure frontend library with HTML and CSS based designs
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- three column section -->
+
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fa fa-code"></i>
+                <h3>HTML5</h3>
+                <p>Build with the latest version of HTML, HTML5</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fa fa-bold"></i>
+                <h3>BOOSTRAP</h3>
+                <p>Build with the latest version of Boostrap, Boostrap4.</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <i class="fab fa-css3"></i>
+                <h3>CSS</h3>
+                <p>Build with the latest version of CSS, CSS3.</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!-- two clolumn section -->
+
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-12 col-lg-6">
+                <h2>If you build it...</h2>
+                <p>
+                    the columns automatically stack on top of each other when the screen is less than 578px wide
+                </p>
+                <p>
+                    Resize the brower window to see the effect. Responsive web design has become more impotant as amount of mobile traffic now accounts for more than half of total internet traffic
+                </p>
+                <p>
+                    it can also display the web page differently depending on the screen size or viewing device
+                </p>
+                <br>
+                <button type="button" class="btn btn-primary">Learn more</button>
+            </div>
+            <div class="col-lg-6">
+                <img src="img/desk.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <hr class="my-4">
+
+    <!-- Fixed background -->
+
+
+    <div class="fixed-wrap">
+        <div id="fixed">
+            <img src="img/mac.png" alt="">
+        </div>
+    </div>
+
+
+    <!-- gif section -->
+
+    <button class="fun" data-toggle="collapse" data-target="#emoji">Click for fun</button>
+    <div id="emoji" class="collapse">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-3">
+                    <img src="./img/gif/panda.gif" class="gif">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./img/gif/chicken.gif" class="gif">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./img/gif/poo.gif" class="gif">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./img/gif/unicorn.gif" class="gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meet the team -->
+
+    <div class="container-fluid padding">
+        <div class="row text-center welcome">
+            <div class="col-12">
+                <h1 class="display-4">Meet the team</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards -->
+
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/team1.png">
+                    <div class="card-body">
+                        <h4 class="card title">John Doe</h4>
+                        <p>John is a entrepreneur with almost 20 years of experince</p>
+                        <button class="btn btn-primary">See profile</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/team2.png">
+                    <div class="card-body">
+                        <h4 class="card title">Mary Jo</h4>
+                        <p>Mary is a designer with almost 10 years of digital design experience.</p>
+                        <button class="btn btn-primary">See profile</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/team3.png">
+                    <div class="card-body">
+                        <h4 class="card title">Phil Do</h4>
+                        <p>Phil is a developer with over 5 years of web development experience</p>
+                        <button class="btn btn-primary">See profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="my-4">
+
+    <!-- Another two column section -->
+
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-lg-6">
+                <h2>Our Philosophy</h2>
+                <p>
+                    We know that greatness is a disruptive era requires bold ambition, curious talent and culture that believes we're smarter together.
+                </p>
+                <p>
+                    We approach every challenge holistically, with best-in-class expertise in data, creativity, media, technology, search, social and more. We call this Alchemy. It has the power to build our clients' brand and tranform their business. And while it seem like
+                    magic, we've got it dow to a science.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <img src="img/bootstrap2.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr class="my-4">
+
+    <!-- Connect -->
+
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>Connect</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-google-plus-g"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="img/w3newbie.png">
+                    <hr class="light">
+                    <p>555-555-555</p>
+                    <p>email@myemail.com</p>
+                    <p>100 Street Name</p>
+                    <p>City,State,000000</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Our Hours</h5>
+                    <hr class="light">
+                    <p>Monday: 9am-5pm</p>
+                    <p>Saturday: 10am-4pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Service Aera</h5>
+                    <hr class="light">
+                    <p>City,State,00000</p>
+                    <p>City,State,00000</p>
+                    <p>City,State,00000</p>
+                    <p>City,State,00000</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy; w3newbie.com</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
