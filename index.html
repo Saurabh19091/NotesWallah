@@ -1,76 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Notes Wallah - Login</title>
+    <style>
+        /* Reset and Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container Styles */
+        body {
+            background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+            max-width: 500px;
+            width: 100%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        .login-box h1 {
+            font-size: 2rem;
+            color: #4e54c8;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .input-box {
+            position: relative;
+            margin: 1.5rem 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: none;
+            border-bottom: 2px solid #4e54c8;
+            outline: none;
+            background: transparent;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0.8rem 0;
+            font-size: 1rem;
+            color: #aaa;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-box input:focus + label,
+        .input-box input:valid + label {
+            top: -20px;
+            font-size: 0.85rem;
+            color: #4e54c8;
+        }
+
+        .login-button {
+            background: #4e54c8;
+            border: none;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .login-button:hover {
+            background: #3c44a4;
+            transform: scale(1.05);
+        }
+
+        .forgot-link,
+        .signup-link {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #4e54c8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-link:hover,
+        .signup-link:hover {
+            color: #3c44a4;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="overlay">
-        <!-- LOGN IN FORM by Omar Dsoky -->
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>Notes Wallah</h1>
         <form action="#" onsubmit="login(event)">
-            <!--   con = Container  for items in the form-->
-            <div class="con">
-                <!--     Start  header Content  -->
-                <header class="head-form">
-                    <h2>Log In</h2>
-                    <!--     A welcome message or an explanation of the login form -->
-                    <p>login here using your username and password</p>
-                </header>
-                <!--     End  header Content  -->
-                <br>
-                <div class="field-set">
-
-                    <!--   user name -->
-                    <span class="input-item">
-                   <i class="fa fa-user-circle"></i>
-                 </span>
-                    <!--   user name Input-->
-                    <input class="form-input" type="text" name="email" id="email" autocomplete="email">
-
-
-                    <br>
-
-                    <!--   Password -->
-
-                    <span class="input-item">
-                <i class="fa fa-key"></i>
-               </span>
-                    <!--   Password Input-->
-                    <input class="form-input" type="password" name="password" id="password" autocomplete="current-password">
-
-
-                    <!--      Show/hide password  -->
-                    <span>
-                <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
-             </span>
-
-
-                    <br>
-                    <!--        buttons -->
-                    <!--      button LogIn -->
-                    <button class="log-in"> Log In </button>
-                </div>
-
-                <!--   other buttons -->
-                <div class="other">
-                    <!--      Forgot Password button-->
-                    <p> <a href="javascript:void(0);" onclick="forgotPassword()">Forgot Password?</a></p>
-                    <p>Don't have an account?<a href="signup.html">Sign Up</a></p>
-
-                </div>
-
-                <!--   End Conrainer  -->
+            <div class="input-box">
+                <input type="text" required>
+                <label>Username</label>
             </div>
-
-            <!-- End Form -->
+            <div class="input-box">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+            <a href="javascript:void(0);" onclick="forgotPassword()">Forgot Password?</a>
+            <a href="signup.html" class="signup-link">Don’t have an account? Sign Up</a>
         </form>
     </div>
 
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5
+                },
+                "size": {
+                    "value": 3
+                },
+                "move": {
+                    "speed": 1
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="/login.js" type="module"></script>
 </body>
-<script src="/login.js" type="module"></script>
-
 </html>
