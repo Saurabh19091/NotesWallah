@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +49,7 @@
             animation: slideIn 1.2s ease-out;
         }
 
-        .login-box h1 {
+        h1 {
             font-size: 2rem;
             color: #4e54c8;
             margin-bottom: 1.5rem;
@@ -57,7 +58,7 @@
 
         .input-box {
             position: relative;
-            margin: 1.5rem 0;
+            margin: 1rem 0;
         }
 
         .input-box input {
@@ -122,11 +123,54 @@
             color: #3c44a4;
         }
 
+        .social-login {
+            margin-top: 1.5rem;
+        }
+
+        .social-login p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0.8rem;
+            font-size: 0.9rem;
+            color: #555;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+        }
+
+        .social-button:hover {
+            background: #e0e0e0;
+            transform: scale(1.05);
+        }
+
         @keyframes slideIn {
             from {
                 transform: translateY(-50px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -137,69 +181,67 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
     </style>
 </head>
+
 <body>
     <div id="particles-js"></div>
     <div class="container">
         <h1>Notes Wallah</h1>
         <form action="#" onsubmit="login(event)">
             <div class="input-box">
-                <input type="text" required>
-                <label>Username</label>
+                <input type="email" id="email" required>
+                <label>Email</label>
             </div>
             <div class="input-box">
-                <input type="password" required>
+                <input type="password" id="password" required>
                 <label>Password</label>
             </div>
             <button type="submit" class="login-button">Login</button>
-            <a href="javascript:void(0);" onclick="forgotPassword()">Forgot Password?</a>
+            <a href="javascript:void(0);" onclick="forgotPassword()" class="forgot-link">Forgot Password?</a>
             <a href="signup.html" class="signup-link">Don’t have an account? Sign Up</a>
         </form>
+
+        <div class="social-login">
+            <button onclick="googleSignIn()" class="login-button">Sign in with Google</button>
+            <button onclick="githubSignIn()" class="login-button">Sign in with GitHub</button>
+        </div>
+        
     </div>
 
-    <!-- Particles.js Script -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/login.js" type="module"></script>
     <script>
         particlesJS("particles-js", {
             "particles": {
-                "number": {
-                    "value": 80
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle"
-                },
-                "opacity": {
-                    "value": 0.5
-                },
-                "size": {
-                    "value": 3
-                },
-                "move": {
-                    "speed": 1
-                }
+                "number": { "value": 80 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "move": { "speed": 1 }
             },
             "interactivity": {
                 "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    }
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" }
                 }
             }
         });
+
+        function signInWithGoogle() {
+            alert("Google sign-in is currently under development.");
+        }
+
+        function signInWithGitHub() {
+            alert("GitHub sign-in is currently under development.");
+        }
     </script>
-    <script src="/login.js" type="module"></script>
 </body>
+
 </html>
